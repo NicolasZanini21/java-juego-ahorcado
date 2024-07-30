@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ahorcado {
@@ -5,10 +8,25 @@ public class Ahorcado {
 
        Scanner scanner = new Scanner(System.in);
 
-       String palabraSecreta = "inteligencia";
-       int intentosMaximos = 10;
-       int intentos = 0;
-       boolean palabraAdivinada = false;
+       
+       List<String> palabras = new ArrayList<>();
+        palabras.add("messi");
+        palabras.add("copa");
+        palabras.add("america");
+        palabras.add("argentina");
+        palabras.add("mundial");
+        palabras.add("qatar");
+        palabras.add("bicampeon");
+        palabras.add("depaul");
+        palabras.add("uruguay");
+        palabras.add("seleccion");
+
+
+        Random random = new Random();
+        String palabraSecreta = palabras.get(random.nextInt(palabras.size()));
+        int intentosMaximos = 10;
+        int intentos = 0;
+        boolean palabraAdivinada = false;
 
        char[] letrasAdivinadas = new char[palabraSecreta.length()];
 
